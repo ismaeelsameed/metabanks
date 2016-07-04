@@ -1,0 +1,336 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="home">
+    <div class="banner-container"><img src="/static/images/main-slider-1.jpg" alt="banner"/>
+
+        <div class="container banner-content">
+        </div>
+    </div>
+</section>
+
+<section id="aboutus" class="secPad about">
+    <div class="container">
+        <div class="heading">
+            <h2>
+                About Us
+            </h2>
+            <h6 id="small-intro">
+                Introduction
+            </h6>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <p class="grey-p">
+                    <span class="green-text">MetaBanks</span> is a financial technology company specializing in
+                    delivering state-of-the-art banking solutions. The team at MetaBanks consists of highly experienced
+                    personnel with extensive banking and technology backgrounds. MetaBanks works hand-in-hand with
+                    clients providing them with top notch IT solutions across a wide spectrum of fundamental banking
+                    activities including but not limited to retail banking, corporate banking, investment banking, group
+                    regulatory compliance and risk management to streamline day-to-day workload in an efficient manner
+                    while enabling decision makers with the technology and real time intelligence needed to take instant
+                    decisions with confidence.
+                </p>
+                <p class="grey-p">
+                    <span class="green-text">MetaBanks</span> differentiates itself in the marketplace by taking a
+                    bottom-up approach to product development by abstracting the complexity of the core banking through
+                    the MetaBanks Middleware that allows for out-of-the-box integration and rapid deployment of its
+                    solutions within the clients perimeter.
+                </p>
+                <br>
+            </div>
+            <div class="col-md-4 ">
+                <h1 class=" margin-top-0 green-qoute">“</h1>
+                <h1 class="investment"> Investment Banking</h1>
+                <p class="parg width-69">
+                    is not a business, it's a personal service where bankers work hand in hand with their clients.
+                </p>
+                <h1 class="second-qoute green-qoute">”</h1>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="secPad-30">
+    <div class="container">
+        <div class="row services" align="center">
+            <div class="col-md-4 margin-bot-50">
+                <img src="/static/images/about-mission.png">
+                <h3>Mission</h3>
+                <p class="grey-p">Our mission is to ensure the highest standards of quality in delivering
+                    state-of-the-art technology solutions for the banking industry.</p>
+                <a class="btn btn-default learn">LEARN MORE</a>
+            </div>
+            <div class="col-md-4 margin-bot-50">
+                <img class="goal" src="/static/images/about-goal.png">
+                <h3>Goal</h3>
+                <p class="grey-p">Our goal is to revolutionize the technical integration process of banking solutions
+                    with the core banking system.</p>
+                <a class="btn btn-default learn">LEARN MORE</a>
+            </div>
+            <div class="col-md-4">
+                <img src="/static/images/about-vision.png" style="margin-top: 11px;">
+                <h3>Vision</h3>
+                <p class="grey-p">Our vision is to advance the banking sector in the Middle East and North Africa by
+                    bridging local banks with global banking solution.</p>
+                <a class="btn btn-default learn">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="secPad about" id="products">
+    <div class="container">
+        <div class="heading">
+            <h2>
+                Products
+            </h2>
+            <h6 id="small-intro">
+                Our Solutions
+            </h6>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Core Banking Middleware</h3>
+                <p class="width-90 grey-p">The MetaBanks Middleware is at the heart of all other MetaBanks solutions, it
+                    introduces an architectural layer on top of the Core Banking system in order to abstract the
+                    underlying complexity of the Core Banking business logic. The MetaBanks Middleware introduces a
+                    Service Oriented Architecture mechanism that exposes SOAP based web services ...</p>
+                </br>
+                <img class="img-responsive" src="/static/images/Products-Core-Banking-Middleware.png">
+                <a class="btn btn-default learn" href="{% url 'products' %}">LEARN MORE</a>
+            </div>
+            <div class="col-md-6">
+                <h3>Web/Mobile Online Banking</h3>
+                <p class="width-90 grey-p">
+                    MetaBanks Web/Mobile Banking solution provides end consumers with an enhanced highly secured online
+                    banking experience, improving service offerings and allowing customers to easily access their
+                    accounts, perform transactions, carry out day-to-day payments, check balances and issue account
+                    statements on demand.</p>
+                </br>
+                <img class="img-responsive" src="/static/images/Products-Web-Mobile-Online-Banking.png">
+                <a class="btn btn-default learn-grey" href="{% url 'products' %}">LEARN MORE</a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Exposure Management System (EMS)</h3>
+                <p class="width-90 grey-p">MetaBanks Exposure Management System (EMS) delivers real-time Business
+                    Intelligence, Analytics and Reporting tools that provide an instant view of current exposure
+                    standing with other bank correspondents. The system is based on providing real time exposure data
+                    correlated against Limits for actual Trade Finance and Treasury transactions ...</p>
+                </br>
+                <img class="img-responsive" src="/static/images/Products-Exposure Management-System-(EMS).png">
+                <a class="btn btn-default learn" href="{% url 'products' %}">LEARN MORE</a>
+            </div>
+            <div class="col-md-6">
+                <h3>Approval Management System</h3>
+                <p class="width-90 grey-p">The MetaBanks Approval Management System (AMS) is a dynamic workflow engine
+                    designed to facilitate and automate the approvals process required for various banking activities.
+                    The system allows for various workflows to be setup and configured, the automated service extracts
+                    essential information needed for the approval process ...</p>
+                </br>
+                <img class="img-responsive" src="/static/images/Products-Approval-Management-System-(AMS).png">
+                <a class="btn btn-default learn-grey" href="{% url 'products' %}">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="secPad-30" id="news">
+    <div class="container">
+        <div class="heading">
+            <h2>
+                News
+            </h2>
+        </div>
+        <div class="row">
+            {% for each in all_news %}
+                <div class="col-md-6">
+                    <h3 class="small-margin-bot">{{ each.name }}</h3>
+                    <h6 id="small-intro" class="no-margin-top">
+                        {{ each.date }}
+                    </h6>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img class="img-responsive" src="/media/{{ each.image }}">
+                        </div>
+                        <div class="col-md-7">
+                            <p class="p-padding width-90 grey-p">{{ each.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {#            <div class="col-md-6">#}
+            {#                <h3 class="small-margin-bot">Headline2</h3>#}
+            {#                <h6 id="small-intro" class="no-margin-top">#}
+            {#                    21.04.2016#}
+            {#                </h6>#}
+            {#                <div class="row">#}
+            {#                    <div class="col-md-5">#}
+            {#                        <img class="img-responsive" src="/static/images/heading2.png">#}
+            {#                    </div>#}
+            {#                    <div class="col-md-7">#}
+            {#                        <p class="p-padding width-90 grey-p"> a afafbfaaajhdf alfadl asdgjklg aslg alb ahsdgl ashdgb#}
+            {#                            ashlgba#}
+            {#                            asd asd asd as dagasgaa a afafbfaaajhdf alfadl asdgjklg aslg alb ahsdgl ashdgb ashlgba </p>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+        </div>
+        <br>
+        <br>
+        {#        <div class="row">#}
+        {#            <div class="col-md-6">#}
+        {#                <h3 class="small-margin-bot">Headline4</h3>#}
+        {#                <h6 id="small-intro" class="no-margin-top">#}
+        {#                    21.03.2016#}
+        {#                </h6>#}
+        {#                <div class="row">#}
+        {#                    <div class="col-md-5">#}
+        {#                        <img class="img-responsive" src="/static/images/heading3.png">#}
+        {#                    </div>#}
+        {#                    <div class="col-md-7">#}
+        {#                        <p class="p-padding width-90 grey-p"> afafbfaaajhdf alfadl asdgjklg aslg alb ahsdgl ashdgb#}
+        {#                            ashlgba asd#}
+        {#                            asd asd as dagasgaa a afafbfaaajhdf alfadl asdgjklg aslg alb ahsdgl ashdgb ashlgba </p>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#            <div class="col-md-6">#}
+        {#                <h3 class="small-margin-bot">Headline3</h3>#}
+        {#                <h6 id="small-intro" class="no-margin-top">#}
+        {#                    27.04.2016#}
+        {#                </h6>#}
+        {#                <div class="row">#}
+        {#                    <div class="col-md-5">#}
+        {#                        <img class="img-responsive" src="/static/images/heading4.png">#}
+        {#                    </div>#}
+        {#                    <div class="col-md-7">#}
+        {#                        <p class="p-padding width-90 grey-p"> afafbfaaajhdf alfadl asdgjklg aslg alb ahsdgl ashdgb#}
+        {#                            ashlgba asd#}
+        {#                            asd asd as dagasgaa a afafbfaaajhdf alfadl asdgjklg aslg alb ahsdgl ashdgb ashlgba </p>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+    </div>
+    </div>
+</section>
+<section class="secPad about" id="support">
+    <div class="container">
+        <div class="heading">
+            <h2>
+                Support
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <img class="img-responsive" src="/static/images/video.png">
+            </div>
+            <div class="col-md-5">
+                <h2 class="no-margin-top">Watch the video to learn more about our platform</h2>
+                </br>
+                <p class="grey-p">
+                    adasfasf a gas ag ag a ga gas as a as asdg asg agdgasdgasdga sdg asg asg asgd
+                    adasfasf a gas ag ag a ga gas as a as asdg asg agdgasdgasdga sdg asg asg asgd
+                    adasfasf a gas ag ag a ga gas as a as asdg asg agdgasdgasdga sdg asg asg asgd
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-responsive padding-30" src="/static/images/help-icon.png">
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="medium-margin-top">We are here to help</h2>
+                    </div>
+                </div>
+                <div class="text-center margin-bot-20">
+                    <a class="btn btn-default learn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="secPad-30" id="contact">
+    <div class="container">
+        <div class="heading">
+            <h2>
+                Contact Us
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <h3 class="grey-p weight-600">Speak your mind</h3>
+                <form id="contactform" role="form" method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <div class="errors"></div>
+                    {{ form }}
+                    <div class="float-right">
+                        <button class="btn btn-default learn" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <h3 class="grey-p weight-600">Connect with us</h3>
+                <div id="googleMap" style="width:100%;height:380px;"></div>
+                </br>
+                <div class="row">
+                    <div class="col-md-4 col-xs-3">
+                        <h4>MetaBanks</h4>
+                    </div>
+                    <div class="col-md-5 col-md-offset-3 col-xs-offset-1 col-xs-8 float-right">
+                        <img src="/static/images/facebook-4-xxl.png">
+                        <img src="/static/images/twitter-4-xxl.png">
+                        <img src="/static/images/instagram-4-xxl.png">
+                        <img src="/static/images/youtube-4-xxl.png">
+                    </div>
+                </div>
+                <h5 class="grey-p">City Plaza</h5>
+                <h5 class="grey-p">Wadi Saqra</h5>
+                <h5 class="grey-p">Amman, Jordan</h5>
+                <h5 class="grey-p">Tel +962 79 999 9999</h5>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+<script>
+        function initialize() {
+        var mapProp = {
+            center: new google.maps.LatLng(51.508742, -0.120850),
+            zoom: 5,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.23/jquery.form-validator.js"></script>
+<script>
+  $.validate({
+    form : '#contactform',
+    lang: 'en',
+    errorMessageClass: 'errors',
+    errorMessagePosition: 'inline',
+    onSuccess : function($form) {
+        var frm = $('#contactform');
+        frm.submit(function () {
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(),
+                success: function (data) {
+                    $("#SOME-DIV").html(data);
+                },
+                error: function(data) {
+                    $("#MESSAGE-DIV").html("Something went wrong!");
+                }
+            });
+            return false;
+        });
+    }
+  });
+</script>
+{% endblock %}

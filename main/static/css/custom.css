@@ -1,0 +1,276 @@
+@font-face {
+font-family: MyriadPro;
+src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+/*@media (min-width: 768px){*/
+/*.navbar {*/
+    /*border-radius: 20px;*/
+/*}*/
+/*}*/
+/*.navbar .container {*/
+	/*position: fixed;*/
+	/*width: 100%;*/
+	/*z-index: 500;*/
+	/*top: 0px;*/
+	/*right: 0;*/
+	/*left: 0;*/
+/*}*/
+
+.header .container{
+    padding:0;
+}
+.navbar {
+	width: 100%;
+    padding-bottom: 7px;
+}
+body {
+    font-family: MyriadPro;
+}
+.navbar-nav {
+    float: right;
+}
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+.logo {
+	margin-left: 25px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #aadc51;
+    margin-top: 14px;
+    padding: 12px 22px 12px;
+    color: #ffffff;
+    font-weight: 900;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+    margin-top: 14px;
+    padding-left: 30px;
+    font-weight: 900;
+}
+.navbar-brand {
+    padding: 21px 15px;
+}
+.banner-container {
+	width: 100%;
+	position: relative;
+	padding: 0px;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+	/*background: url("../images/banner-bg.jpg") no-repeat;*/
+	background-size: 100% 100%;
+	background-size: cover;
+	position: relative;
+}
+.banner-container > img {
+	width: 100%;
+
+}
+.goal {
+    margin-top: -22px;
+}
+@media (max-width: 768px) {
+.banner-container > img {
+	min-width: 100%;
+	height:350px;
+}
+}
+@media (max-width: 480px) {
+.banner-container {
+	background-size: contain;
+	overflow:hidden;
+}
+.banner-container > img {
+	width: auto;
+	height:350px;
+}
+.navbar-brand {
+    padding: 10px 15px;
+}
+.navbar-nav {
+    float: left;
+}
+.margin-bot-50 {
+    margin-bottom: 75px;
+}
+}
+@media (max-width: 320px) {
+.banner-container {
+	background-size: contain;
+}
+}
+.navbar {
+    margin-bottom: 12px;
+}
+.about{
+    background: #f7f7f7;
+}
+.secPad {
+    padding: 0 0;
+}
+.heading {
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    display: block;
+}
+#small-intro {
+    color: #a9a6a6;
+    font-style: italic;
+}
+.margin-top-0{
+	margin-top: -15px;
+}
+.green-qoute {
+	color: #aadc51;
+	font-size: 48px;
+	font-weight: 900;
+}
+.investment {
+	margin-left: 55px;
+	margin-top: -40px;
+	color: #aadc51;
+	font-weight: 900;
+    font-size: 40px;
+}
+.parg {
+	margin-left: 55px;
+    font-size: 22px;
+    line-height: 1.2;
+}
+.second-qoute {
+	margin-left: 295px;
+    margin-top: -34px;
+}
+.green-text {
+	color: #aadc51;
+}
+
+.secPad-30 {
+    padding: 75px 0;
+}
+.services {
+	text-align: center;
+}
+.learn {
+	color: #fff;
+    background-color: #aadc51;
+	padding: 10px 60px;
+	margin-top: 20px;
+	border-radius: 0;
+	font-weight: 900;
+}
+.learn-grey {
+	color: #fff;
+    background-color: #2d2d2e;
+	padding: 10px 60px;
+	margin-top: 20px;
+	border-radius: 0;
+	font-weight: 900;
+}
+H2{
+	font-weight: 900;
+	color: #464646;
+}
+.width-90{
+	width: 90%;
+}
+.width-69{
+    width: 69%;
+}
+.width-30 {
+	width: 32.3%;
+}
+.no-margin-top{
+	margin-top: 0;
+}
+.medium-margin-top{
+	margin-top: 50px;
+}
+.small-margin-bot {
+	margin-bottom: 2px;
+}
+.p-padding {
+	padding: 13px 0;
+}
+.padding-30 {
+	padding: 30px;
+}
+.text-input-grey {
+	width: 100%;
+    border: 0;
+    background: #f7f7f7;
+    padding: 15px;
+	margin-bottom: 12px;
+}
+.mail-input {
+	padding: 25px;
+	border-radius: 0;
+}
+.footer-bottom input::-webkit-input-placeholder {
+	color: #464646 !important;
+	text-align: center;
+	font-weight: 900;
+}
+.float-right {
+	float: right;
+}
+.footer-bottom {
+    position: relative;
+    background-color: #383839;
+}
+.footer-bottom h1,
+.footer-bottom h2,
+.footer-bottom h3,
+.footer-bottom h4,
+.footer-bottom h5,
+.footer-bottom h6 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+}
+.footer-p {
+	font-size: 14px;
+	color: #767676;
+}
+.join {
+	padding: 15px;
+	background-color: #aadc51;
+	color: #ffffff;
+	border-radius: 0;
+	width: 200%;
+}
+.center {
+	text-align: center;
+}
+.copyright {
+	color: #ffffff;
+	font-size: 10px;
+}
+.grey-p {
+    color: #85858c;
+    font-family: MyriadPro;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.weight-600 {
+    font-weight: 600;
+}
+.margin-bot-20 {
+    margin-bottom: 20px;
+}
+.bold {
+	font-weight: 900;
+}
+.font-16 {
+	font-size: 16px;
+}
+.padding-10 {
+	padding-top: 1px;
+}
+.margin-bot-50 {
+    margin-bottom: 75px;
+}
