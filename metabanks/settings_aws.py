@@ -47,7 +47,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/home/ubuntu/log/error.log',
+            'filename': '/home/ubuntu/metabanks/error.log',
         },
     },
     'loggers': {
