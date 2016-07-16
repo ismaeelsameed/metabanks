@@ -1,11 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
 <section id="home">
-    <div class="banner-container"><img src="/static/images/main-slider-1.jpg" alt="banner"/>
-
-        <div class="container banner-content">
+{#    <div class="banner-container"><img src="/static/images/main-slider-1.jpg" alt="banner"/>#}
+{##}
+{#        <div class="container banner-content">#}
+{#        </div>#}
+{#    </div>#}
+{#<section class="content-section video-section">#}
+{#  <div class="pattern-overlay">#}
+{#  <a id="bgndVideo" class="player" data-property="{videoURL:'/static/videos/business_meeting.mp4',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>#}
+{#  </div>#}
+{#</section>#}
+<div class="homepage-hero-module">
+    <div class="video-container">
+        <div class="title-container">
+            <div class="headline">
+                <h3>State of the art</h3>
+                <h1>Solutions</h1>
+                <a class="btn btn-default learn">LEARN MORE</a>
+            </div>
+        </div>
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+            <source src="/static/videos/business_meeting.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.</video>
+        <div class="poster hidden">
+            <img src="http://www.videojs.com/img/poster.jpg" alt="">
         </div>
     </div>
+</div>
 </section>
 
 <section id="aboutus" class="secPad about">
@@ -308,7 +330,7 @@
 
 </script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.23/jquery.form-validator.js"></script>
-<script>
+    <script>
   $.validate({
     form : '#contactform',
     lang: 'en',
@@ -332,5 +354,75 @@
         });
     }
   });
+    $( document ).ready(function() {
+
+    // Resive video
+    scaleVideoContainer();
+
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+
+    $(window).on('resize', function() {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
+
+});
+
+/** Reusable Functions **/
+/********************************************************************/
+
+function scaleVideoContainer() {
+
+    var height = $(window).height();
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $(window).width(),
+        windowHeight = $(window).height(),
+        videoWidth,
+        videoHeight;
+
+    console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width'),
+            windowAspectRatio = windowHeight/windowWidth;
+
+        if (videoAspectRatio > windowAspectRatio) {
+            videoWidth = windowWidth;
+            videoHeight = videoWidth * videoAspectRatio;
+            $(this).css({'top' : -(videoHeight - windowHeight) / 2 + 'px', 'margin-left' : 0});
+        } else {
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+        }
+
+        $(this).width(videoWidth).height(videoHeight);
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+
+    });
+}
 </script>
 {% endblock %}
