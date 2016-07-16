@@ -24,8 +24,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', home, name='home'),
     url(r'^contact$', contact, name='contact'),
-    url(r'^products', products, name='products'),
-    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {
-                           'document_root': settings.MEDIA_ROOT}),
-]
+    url(r'^products$', products, name='products'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
