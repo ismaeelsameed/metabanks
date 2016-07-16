@@ -25,5 +25,7 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^contact$', contact, name='contact'),
     url(r'^products', products, name='products'),
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+                           'document_root': settings.MEDIA_ROOT}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
