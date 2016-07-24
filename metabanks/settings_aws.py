@@ -142,8 +142,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "main/static"),
 )
 STATIC_URL = '/static/'
+MEDIA_ROOT = '/home/ubuntu/metabanks/main/media/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',

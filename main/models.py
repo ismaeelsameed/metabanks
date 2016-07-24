@@ -7,7 +7,7 @@ from django.db import models
 class News(models.Model):
     name = models.CharField(max_length=255)
     date = models.DateField()
-    image = models.ImageField()
+    image = models.ImageField("images")
     description = models.TextField()
 
     def __unicode__(self):
