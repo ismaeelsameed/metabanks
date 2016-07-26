@@ -34,3 +34,4 @@ def contact(request):
         #           ['distinctshots@gmail.com'], fail_silently=False,
         #           html_message="Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + last_name)
     return HttpResponse("done")
+
