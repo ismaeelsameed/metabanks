@@ -57,6 +57,9 @@ body {
 .navbar-brand {
     padding: 21px 15px;
 }
+.special-margin-top {
+    margin-top: 47px !important;
+}
 .banner-container {
 	width: 100%;
 	position: relative;
@@ -176,7 +179,6 @@ body {
 	margin-top: 20px;
 	border-radius: 0;
 	font-weight: 900;
-    font-size:12px;
 }
 .learn-grey {
 	color: #fff;
