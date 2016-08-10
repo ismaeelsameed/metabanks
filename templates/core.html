@@ -12,7 +12,7 @@
                 <li class="active"><a href="{% url 'home' %}#home" class="scroll-link">Home</a></li>
                 <li><a href="{% url 'home' %}#aboutus" class="scroll-link">About Us</a></li>
                 <li><a href="{% url 'home' %}#products" class="scroll-link">Products</a></li>
-                <li><a href="{% url 'home' %}#news" class="scroll-link">News</a></li>
+{#                <li><a href="{% url 'home' %}#news" class="scroll-link">News</a></li>#}
                 <li><a href="{% url 'home' %}#support" class="scroll-link">Support</a></li>
                 <li><a href="{% url 'home' %}#contact" class="scroll-link">Contact Us</a></li>
             </ul>
@@ -28,11 +28,11 @@
                                            alt="banner"/>
         </div>
     </section>
-    <section id="aboutus" class="secPad">
+    <section id="aboutus">
         <div class="container">
             <div class="heading">
                 <h2>
-                    Exposure Management System
+                    Core Banking Middleware
                 </h2>
                 <h6 id="small-intro">
                     Products
@@ -42,15 +42,19 @@
                 <div class="col-md-8">
 
                     <p class="grey-p">
-                        <span class="green-text">MetaBanks</span> Exposure Management System (EMS) delivers real-time
-                        Business Intelligence, Analytics and Reporting tools that provide an instant view of current
-                        exposure standing with other bank correspondents. The system is based on providing real time
-                        exposure data correlated against Limits for actual Trade Finance and Treasury transactions that
-                        have been conducted. EMS provides Executive Management with accurate and real time intelligence
-                        that allows for instant decision making in times of crisis and eases day-to-day decision making
-                        for the Financial Institutions department. EMS also provides pro-active control flags including
-                        reminders & alarms notifying of breaches in limits.
+                        <span class="green-text">MetaBanks</span> Middleware is at the heart of all other MetaBanks solutions, it introduces an architectural layer on top of the Core Banking system in order to abstract the underlying complexity of the Core Banking business logic. The MetaBanks Middleware introduces a Service Oriented Architecture mechanism that exposes SOAP based web services that can be consumed over HTTPS. The MetaBanks Middleware ships with Software Development Kits (SDK’s) in multiple programming languages including VB.NET, C#, Java, PHP and Python that are ready to be used by IT teams to rapidly develop in house banking solutions without worrying about Core Banking implementation and integration details. A comprehensive list of features include:
                     </p>
+                    <ul class="padding-30 grey-p">
+                        <li>Architected and deployed as Stateless J2EE Enterprise JavaBeans.</li>
+                        <li>Scalable horizontally and vertically in order to process and handle millions of concurrent requests per second.</li>
+                        <li>Exposes a SOAP based interface with a well defined WSDL interface for enabling JAX-WS service consumption with WS-Security Profiles.</li>
+                        <li>Transport level encryption with a 2048 bit cipher to protect the communication channel between the Software Development Kit (SDK) and the MetaBanks Middleware.</li>
+                        <li>Message-level security to ensure confidentiality by digitally encrypting message parts; integrity using digital signatures; and authentication by requiring username, X.509, or SAML tokens.</li>
+                        <li>Provides SDK’s for various programming languages including Java, Python, PHP, VB.NET and C# to allow developers to easily retrieve data from the core banking system with minimal effort.</li>
+                        <li>Exposes numerous endpoints for retrieving data from the core banking system including but not limited to customer information, account information, account transactions, credit card information, loan information, Letter of Credit details, Letter of Guarantee details, Placements, Deposits, Foreign Exchange transactions, Interest Rate Swaps etc.</li>
+                        <li>Out of the box integration with the MetaBanks Web/Mobile Banking solution.</li>
+                        <li>Out of the box integration with the MetaBanks Exposure Management System solution.</li>
+                    </ul>
                     <br>
                 </div>
                 <div class="col-md-4 ">
@@ -65,28 +69,28 @@
 
         </div>
     </section>
-    <section class="secPad">
-        <div class="container">
-            <div class="heading">
-                <h3>
-                    Product Overview
-                </h3>
-            </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <img class="img-responsive" src="/static/images/video.png">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="secPad margin-bot-50">
+{#    <section class="secPad">#}
+{#        <div class="container">#}
+{#            <div class="heading">#}
+{#                <h3>#}
+{#                    Product Overview#}
+{#                </h3>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="col-md-8">#}
+{#                    <img class="img-responsive" src="/static/images/video.png">#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    <section class="margin-bot-50">
         <div class="container">
             <div class="heading">
                 <h2>
                     Features
                 </h2>
             </div>
-            <div class="row" align="center">
+            <div class="row margin-bot-20" align="center">
                 <div class="col-md-4">
                     <div class="about padding-10">
                         <img class="img-responsive medium-margin-top" src="/static/images/feature-limits-reports.png">

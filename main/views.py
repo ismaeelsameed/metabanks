@@ -15,8 +15,20 @@ def home(request):
     return render(request, 'index.html', {'form': contact_us_form, 'all_news': all_news})
 
 
-def products(request):
-    return render(request, 'products.html')
+def exposure(request):
+    return render(request, 'exposure.html')
+
+
+def core(request):
+    return render(request, 'core.html')
+
+
+def wm(request):
+    return render(request, 'wm.html')
+
+
+def approval(request):
+    return render(request, 'approval.html')
 
 
 @csrf_exempt

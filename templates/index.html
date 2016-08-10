@@ -119,7 +119,7 @@
                     Service Oriented Architecture mechanism that exposes SOAP based web services ...</p>
                 </br>
                 <img class="img-responsive" src="/static/images/Products-Core-Banking-Middleware.png">
-                <a class="btn btn-default learn" href="{% url 'products' %}">LEARN MORE</a>
+                <a class="btn btn-default learn" href="{% url 'core' %}">LEARN MORE</a>
             </div>
             <div class="col-md-6">
                 <h3>Web/Mobile Online Banking</h3>
@@ -130,7 +130,7 @@
                     statements on demand.</p>
                 </br>
                 <img class="img-responsive" src="/static/images/Products-Web-Mobile-Online-Banking.png">
-                <a class="btn btn-default learn-grey" href="{% url 'products' %}">LEARN MORE</a>
+                <a class="btn btn-default learn-grey" href="{% url 'wm' %}">LEARN MORE</a>
             </div>
         </div>
         <br>
@@ -144,7 +144,7 @@
                     correlated against Limits for actual Trade Finance and Treasury transactions ...</p>
                 </br>
                 <img class="img-responsive" src="/static/images/Products-Exposure Management-System-(EMS).png">
-                <a class="btn btn-default learn" href="{% url 'products' %}">LEARN MORE</a>
+                <a class="btn btn-default learn" href="{% url 'exposure' %}">LEARN MORE</a>
             </div>
             <div class="col-md-6">
                 <h3>Approval Management System</h3>
@@ -154,35 +154,35 @@
                     essential information needed for the approval process ...</p>
                 </br>
                 <img class="img-responsive" src="/static/images/Products-Approval-Management-System-(AMS).png">
-                <a class="btn btn-default learn-grey" href="{% url 'products' %}">LEARN MORE</a>
+                <a class="btn btn-default learn-grey" href="{% url 'approval' %}">LEARN MORE</a>
             </div>
         </div>
     </div>
 </section>
-<section class="secPad-30" id="news">
-    <div class="container">
-        <div class="heading">
-            <h2>
-                News
-            </h2>
-        </div>
-        <div class="row">
-            {% for each in all_news %}
-                <div class="col-md-6">
-                    <h3 class="small-margin-bot">{{ each.name }}</h3>
-                    <h6 id="small-intro" class="no-margin-top">
-                        {{ each.date }}
-                    </h6>
-                    <div class="row">
-                        <div class="col-md-5">
-                            <img class="img-responsive" src="{{ each.image }}">
-                        </div>
-                        <div class="col-md-7">
-                            <p class="p-padding width-90 grey-p">{{ each.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+{#<section class="secPad-30" id="news">#}
+{#    <div class="container">#}
+{#        <div class="heading">#}
+{#            <h2>#}
+{#                News#}
+{#            </h2>#}
+{#        </div>#}
+{#        <div class="row">#}
+{#            {% for each in all_news %}#}
+{#                <div class="col-md-6">#}
+{#                    <h3 class="small-margin-bot">{{ each.name }}</h3>#}
+{#                    <h6 id="small-intro" class="no-margin-top">#}
+{#                        {{ each.date }}#}
+{#                    </h6>#}
+{#                    <div class="row">#}
+{#                        <div class="col-md-5">#}
+{#                            <img class="img-responsive" src="{{ each.image }}">#}
+{#                        </div>#}
+{#                        <div class="col-md-7">#}
+{#                            <p class="p-padding width-90 grey-p">{{ each.description }}</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endfor %}#}
             {#            <div class="col-md-6">#}
             {#                <h3 class="small-margin-bot">Headline2</h3>#}
             {#                <h6 id="small-intro" class="no-margin-top">#}
@@ -199,9 +199,9 @@
             {#                    </div>#}
             {#                </div>#}
             {#            </div>#}
-        </div>
-        <br>
-        <br>
+{#        </div>#}
+{#        <br>#}
+{#        <br>#}
         {#        <div class="row">#}
         {#            <div class="col-md-6">#}
         {#                <h3 class="small-margin-bot">Headline4</h3>#}
@@ -235,9 +235,9 @@
         {#                    </div>#}
         {#                </div>#}
         {#            </div>#}
-    </div>
-    </div>
-</section>
+{#    </div>#}
+{#    </div>#}
+{#</section>#}
 <section class="secPad about" id="support">
     <div class="container">
         <div class="heading">
@@ -319,7 +319,7 @@
 <script>
         function initialize() {
         var mapProp = {
-            key: 'AIzaSyBtjCK313sK4RGPkxyuxEIevj35_2gh2zQ',
+            key: 'AIzaSyC1jmk998WpNHYRL5VOhvLlR4yxW7VRn1g',
             center: new google.maps.LatLng(51.508742, -0.120850),
             zoom: 5,
             mapTypeId: google.maps.MapTypeId.ROADMAP

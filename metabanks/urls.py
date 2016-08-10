@@ -17,15 +17,18 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf import settings
-from main.views import home, contact, products
+from main.views import home, contact, exposure, core, wm, approval
 
 admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', home, name='home'),
     url(r'^contact$', contact, name='contact'),
-    url(r'^products$', products, name='products'),
-    # url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+    url(r'^exposure', exposure, name='exposure'),
+    url(r'^core', core, name='core'),
+    url(r'^wm', wm, name='wm'),
+    url(r'^approval', approval, name='approval'),
+    # url(r'^products$', products, name='products'),
+    # (r'^media/(?P<path>.*)$', 'django.views.static.serve', {
     #                        'document_root': settings.MEDIA_ROOT}),
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
