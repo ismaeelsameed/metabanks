@@ -1,7 +1,7 @@
 from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render
-
+import json
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
 
@@ -33,17 +33,23 @@ def approval(request):
 
 @csrf_exempt
 def contact(request):
+    form = ContactUs(request.POST or None)
     if request.method == "POST":
-        first_name = request.POST["first_name"]
-        last_name = request.POST["last_name"]
-        email = request.POST["email"]
-        phone = request.POST["phone_number"]
-        message = request.POST["comment"]
-        new_contact = Contact.objects.create(first_name=first_name, last_name=last_name, email=email, phone=phone, comment=message)
-        # send_mail('New reservation',
-        #           "Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + last_name,
-        #           "distinctshots@gmail.com",
-        #           ['distinctshots@gmail.com'], fail_silently=False,
-        #           html_message="Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + last_name)
-    return HttpResponse("done")
-
+        if form.is_valid():
+            first_name = request.POST["first_name"]
+            last_name = request.POST["last_name"]
+            email = request.POST["email"]
+            phone = request.POST["phone_number"]
+            message = request.POST["comment"]
+            new_contact = Contact.objects.create(first_name=first_name, last_name=last_name, email=email, phone=phone, comment=message)
+            send_mail('New reservation',
+                      "Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + " " + last_name,
+                      "hayitsnotforanyone@gmail.com",
+                      ['m.zuby@metabanks.com'], fail_silently=False,
+                      html_message="Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + last_name)
+            return render(request, 'index.html')
+        else:
+            return render(request, 'index.html', {"form": form})
+    else:
+        form = ContactUs()
+        return render(request, 'index.html', {"form": form})

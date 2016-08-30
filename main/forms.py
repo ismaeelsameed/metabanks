@@ -6,7 +6,7 @@ class ContactUs(forms.Form):
     first_name = forms.CharField(max_length=255, label="")
     last_name = forms.CharField(max_length=255, label="")
     email = forms.EmailField(max_length=255, label="")
-    phone_number = forms.CharField(max_length=30, label="")
+    phone_number = forms.CharField(max_length=30, label="", required=False)
     comment = forms.CharField(widget=forms.Textarea, label="")
 
     def __init__(self, *args, **kwargs):

@@ -282,7 +282,7 @@
         <div class="row">
             <div class="col-md-6 col-xs-12">
                 <h3 class="grey-p weight-600">Speak your mind</h3>
-                <form id="contactform" role="form" method="POST" action="{% url 'contact' %}">
+                <form id="contact" role="form" method="POST" action="{% url 'contact' %}#contact">
                     {% csrf_token %}
                     <div class="errors"></div>
                     {{ form }}
@@ -330,31 +330,31 @@
 
 
 </script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.23/jquery.form-validator.js"></script>
+{#<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.23/jquery.form-validator.js"></script>#}
     <script>
-  $.validate({
-    form : '#contactform',
-    lang: 'en',
-    errorMessageClass: 'errors',
-    errorMessagePosition: 'inline',
-    onSuccess : function($form) {
-        var frm = $('#contactform');
-        frm.submit(function () {
-            $.ajax({
-                type: frm.attr('method'),
-                url: frm.attr('action'),
-                data: frm.serialize(),
-                success: function (data) {
-                    $("#SOME-DIV").html(data);
-                },
-                error: function(data) {
-                    $("#MESSAGE-DIV").html("Something went wrong!");
-                }
-            });
-            return false;
-        });
-    }
-  });
+{#  $.validate({#}
+{#    form : '#contactform',#}
+{#    lang: 'en',#}
+{#    errorMessageClass: 'errors',#}
+{#    errorMessagePosition: 'inline',#}
+{#    onSuccess : function($form) {#}
+{#        var frm = $('#contactform');#}
+{#        frm.submit(function () {#}
+{#            $.ajax({#}
+{#                type: frm.attr('method'),#}
+{#                url: frm.attr('action'),#}
+{#                data: frm.serialize(),#}
+{#                success: function (data) {#}
+{#                    confirm("your message has been sent successfully")#}
+{#                },#}
+{#                error: function(data) {#}
+{#                    $("#MESSAGE-DIV").html("Something went wrong!");#}
+{#                }#}
+{#            });#}
+{#            return false;#}
+{#        });#}
+{#    }#}
+{#  });#}
     $( document ).ready(function() {
 
     // Resive video

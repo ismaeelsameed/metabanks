@@ -148,3 +148,8 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'hayitsnotforanyone@gmail.com'
+EMAIL_HOST_PASSWORD = '0788060672S@meed0'
+EMAIL_PORT = 587

@@ -18,6 +18,9 @@ class Contact(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
-    phone = models.CharField(max_length=255)
+    phone = models.CharField(max_length=255, blank=True)
     comment = models.TextField()
     submission_date = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.email
