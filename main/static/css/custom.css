@@ -23,6 +23,7 @@ src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
 .header .container{
     padding:0;
 }
+
 .navbar {
 	width: 100%;
     padding-bottom: 7px;
@@ -375,8 +376,13 @@ H2{
     text-align: justify;color: #848485;font-size: 16px;
 }
 h6, .h6{font-size: 14px;}
-.col-md-4{
-    padding-right: 30px;padding-left: 30px;
+/*.col-md-4{*/
+    /*padding-right: 30px;padding-left: 30px;*/
+/*}*/
+.features{
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+    padding-bottom: 8px;
 }
 #products p{
     text-align:left;
