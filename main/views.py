@@ -40,13 +40,14 @@ def contact(request):
             last_name = request.POST["last_name"]
             email = request.POST["email"]
             phone = request.POST["phone_number"]
+            company = request.POST["company"]
             message = request.POST["comment"]
-            new_contact = Contact.objects.create(first_name=first_name, last_name=last_name, email=email, phone=phone, comment=message)
+            new_contact = Contact.objects.create(first_name=first_name, last_name=last_name, email=email, phone=phone, company=company, comment=message)
             send_mail('New reservation',
-                      "Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + " " + last_name,
+                      "Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Company: " + company + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + " " + last_name,
                       "hayitsnotforanyone@gmail.com",
-                      ['m.zuby@metabanks.com'], fail_silently=False,
-                      html_message="Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + last_name)
+                      ['ismaeelsameed@hotmail.com'], fail_silently=False,
+                      html_message="Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Company: " + company + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + last_name)
             return render(request, 'index.html')
         else:
             return render(request, 'index.html', {"form": form})

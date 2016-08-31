@@ -7,6 +7,7 @@ class ContactUs(forms.Form):
     last_name = forms.CharField(max_length=255, label="")
     email = forms.EmailField(max_length=255, label="")
     phone_number = forms.CharField(max_length=30, label="", required=False)
+    company = forms.CharField(max_length=30, label="", required=False)
     comment = forms.CharField(widget=forms.Textarea, label="")
 
     def __init__(self, *args, **kwargs):
@@ -24,7 +25,10 @@ class ContactUs(forms.Form):
             'placeholder': 'Email*'})
         self.fields['phone_number'].widget = TextInput(attrs={
             'class': 'text-input-grey',
-            'placeholder': 'Phone Number*'})
+            'placeholder': 'Phone Number'})
+        self.fields['company'].widget = TextInput(attrs={
+            'class': 'text-input-grey',
+            'placeholder': 'Company'})
         self.fields['comment'].widget = Textarea(attrs={
             'class': 'text-input-grey',
             'placeholder': 'Type your inquiry here ...'})

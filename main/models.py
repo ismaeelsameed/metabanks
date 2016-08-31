@@ -19,6 +19,7 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     phone = models.CharField(max_length=255, blank=True)
+    company = models.CharField(max_length=255, blank=True)
     comment = models.TextField()
     submission_date = models.DateTimeField(auto_now=True)
 
