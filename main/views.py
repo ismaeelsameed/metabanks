@@ -46,7 +46,7 @@ def contact(request):
             send_mail('New reservation',
                       "Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Company: " + company + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + " " + last_name,
                       "hayitsnotforanyone@gmail.com",
-                      ['ismaeelsameed@hotmail.com'], fail_silently=False,
+                      ['m.zuby@metabanks.com'], fail_silently=False,
                       html_message="Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Company: " + company + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + last_name)
             return render(request, 'index.html')
         else:
