@@ -81,6 +81,7 @@ body {
 .goal {
     margin-top: -22px;
 }
+
 @media (max-width: 768px) {
     .banner-container > img {
         min-width: 100%;
@@ -120,6 +121,9 @@ body {
 .about{
     background: #f7f7f7;
     padding-bottom: 20px!important;
+}
+.padding-special {
+    padding-bottom: 67px !important;
 }
 .secPad {
     padding: 75px 0 0;
