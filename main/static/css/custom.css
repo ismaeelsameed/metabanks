@@ -118,10 +118,10 @@ body {
 .navbar {
     margin-bottom: 12px;
 }
-.about{
-    background: #f7f7f7;
-    padding-bottom: 20px!important;
-}
+/*.about{*/
+    /*background: #f7f7f7;*/
+    /*padding-bottom: 20px!important;*/
+/*}*/
 .padding-special {
     padding-bottom: 67px !important;
 }
