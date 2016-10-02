@@ -6,7 +6,7 @@
             <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"
                     data-target="#main-nav"><span class="sr-only">Toggle navigation</span> <span
                     class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a href="#" class="navbar-brand scroll-top logo"><img src="/static/images/metabanks-logo.png"></a></div>
+            <a href="{% url 'main.views.home' %}" class="navbar-brand scroll-top logo"><img src="/static/images/metabanks-logo.png"></a></div>
         <div id="main-nav" class="collapse navbar-collapse">
             <ul class="nav navbar-nav" id="mainNav">
                 <li class="active"><a href="{% url 'home' %}#home" class="scroll-link">Home</a></li>
@@ -23,7 +23,7 @@
 {% endblock %}
 {% block content %}
     <section id="home">
-        <div class="banner-container"><img class="img-responsive"
+        <div class="banner-container" ><img class="img-responsive img-banner"
                                            src="/static/images/Core-Banking-Middleware-banner-new.png"
                                            alt="banner"/>
         </div>
@@ -39,7 +39,7 @@
                 </h6>
             </div>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
 
                     <p class="grey-p">
                         <span class="green-text">MetaBanks</span> Middleware is at the heart of all other MetaBanks solutions, it introduces an architectural layer on top of the Core Banking system in order to abstract the underlying complexity of the Core Banking business logic. The MetaBanks Middleware introduces a Service Oriented Architecture mechanism that exposes SOAP based web services that can be consumed over HTTPS. The MetaBanks Middleware ships with Software Development Kits (SDK’s) in multiple programming languages including VB.NET, C#, Java, PHP and Python that are ready to be used by IT teams to rapidly develop in house banking solutions without worrying about Core Banking implementation and integration details. A comprehensive list of features include:
@@ -57,14 +57,14 @@
 {#                    </ul>#}
                     <br>
                 </div>
-                <div class="col-md-4 ">
-                    <h1 class=" margin-top-0 green-qoute">“</h1>
-                    <h1 class="investment"> The Individual Investor</h1>
-                    <p class="parg width-69">
-                        should act consistently as an investor and not as a speculator
-                    </p>
-                    <h1 class="second-qoute green-qoute">”</h1>
-                </div>
+{#                <div class="col-md-4 ">#}
+{#                    <h1 class=" margin-top-0 green-qoute">“</h1>#}
+{#                    <h1 class="investment"> The Individual Investor</h1>#}
+{#                    <p class="parg width-69">#}
+{#                        should act consistently as an investor and not as a speculator#}
+{#                    </p>#}
+{#                    <h1 class="second-qoute green-qoute">”</h1>#}
+{#                </div>#}
             </div>
 
         </div>

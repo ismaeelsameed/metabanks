@@ -428,3 +428,8 @@ h6, .h6{font-size: 14px;}
     padding: 75px 0;
 }
 }
+.img-banner{
+    width: 1170px !important;
+    display: block;
+    margin: auto
+}

@@ -17,7 +17,7 @@
             <div class="headline">
                 <h3>State of the art</h3>
                 <h1>Solutions</h1>
-                <a class="btn btn-default learn">LEARN MORE</a>
+                <a href="{% url 'home' %}#products" class="btn btn-default learn">LEARN MORE</a>
             </div>
         </div>
         <div class="filter"></div>
@@ -41,7 +41,7 @@
             </h6>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
 
                 <p class="grey-p">
                     <span class="green-text">MetaBanks</span> is a financial technology company specializing in
@@ -61,14 +61,14 @@
                 </p>
                 <br>
             </div>
-            <div class="col-md-4 ">
-                <h1 class=" margin-top-0 green-qoute">“</h1>
-                <h1 class="investment"> Investment Banking</h1>
-                <p class="parg width-69">
-                    is not a business, it's a personal service where bankers work hand in hand with their clients.
-                </p>
-                <h1 class="second-qoute green-qoute">”</h1>
-            </div>
+{#            <div class="col-md-4 ">#}
+{#                <h1 class=" margin-top-0 green-qoute">“</h1>#}
+{#                <h1 class="investment"> Investment Banking</h1>#}
+{#                <p class="parg width-69">#}
+{#                    is not a business, it's a personal service where bankers work hand in hand with their clients.#}
+{#                </p>#}
+{#                <h1 class="second-qoute green-qoute">”</h1>#}
+{#            </div>#}
         </div>
 
     </div>
@@ -81,21 +81,21 @@
                 <h3>Mission</h3>
                 <p class="grey-p">Our mission is to ensure the highest standards of quality in delivering
                     state-of-the-art technology solutions for the banking industry.</p>
-                <a class="btn btn-default learn">LEARN MORE</a>
+{#                <a class="btn btn-default learn">LEARN MORE</a>#}
             </div>
             <div class="col-md-4 margin-bot-50">
                 <img class="goal" src="/static/images/about-goal.png">
                 <h3>Goal</h3>
                 <p class="grey-p">Our goal is to revolutionize the technical integration process of banking solutions
                     with the core banking system.</p>
-                <a class="btn btn-default learn">LEARN MORE</a>
+{#                <a class="btn btn-default learn">LEARN MORE</a>#}
             </div>
             <div class="col-md-4">
                 <img src="/static/images/about-vision.png" style="margin-top: 11px;">
                 <h3>Vision</h3>
                 <p class="grey-p">Our vision is to advance the banking sector in the Middle East and North Africa by
                     bridging local banks with global banking solution.</p>
-                <a class="btn btn-default learn">LEARN MORE</a>
+{#                <a class="btn btn-default learn">LEARN MORE</a>#}
             </div>
         </div>
     </div>
@@ -119,7 +119,7 @@
                     Service Oriented Architecture mechanism that exposes SOAP based web services ...</p>
                 </br>
                 <img class="img-responsive" src="/static/images/Products-Core-Banking-Middleware-New.png">
-                <a class="btn btn-default learn" href="{% url 'core' %}">LEARN MORE</a>
+                <a class="btn btn-default learn" href="{% url 'core' %}">Learn More</a>
             </div>
             <div class="col-md-6">
                 <h3>Web/Mobile Online Banking</h3>
@@ -130,7 +130,7 @@
                     statements on demand.</p>
                 </br>
                 <img class="img-responsive" src="/static/images/Products-Web-Mobile-Online-Banking-new.png">
-                <a class="btn btn-default learn-grey" href="{% url 'wm' %}">LEARN MORE</a>
+                <a class="btn btn-default learn" href="{% url 'wm' %}">Learn More</a>
             </div>
         </div>
         <br>
@@ -144,7 +144,7 @@
                     correlated against Limits for actual Trade Finance and Treasury transactions ...</p>
                 </br>
                 <img class="img-responsive" src="/static/images/Products-Exposure Management-System-(EMS).png">
-                <a class="btn btn-default learn" href="{% url 'exposure' %}">LEARN MORE</a>
+                <a class="btn btn-default learn" href="{% url 'exposure' %}">Learn More</a>
             </div>
             <div class="col-md-6">
                 <h3>Approval Management System</h3>
@@ -154,7 +154,7 @@
                     essential information needed for the approval process ...</p>
                 </br>
                 <img class="img-responsive" src="/static/images/Products-Approval-Management-System-(AMS).png">
-                <a class="btn btn-default learn-grey" href="{% url 'approval' %}">LEARN MORE</a>
+                <a class="btn btn-default learn" href="{% url 'approval' %}">Learn More</a>
             </div>
         </div>
     </div>
