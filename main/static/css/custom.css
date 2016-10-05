@@ -169,7 +169,7 @@ body {
 }
 
 .secPad-30 {
-    padding: 75px 0;
+    padding: 75px 0 0 0;
 }
 .services {
 	text-align: center;
@@ -401,9 +401,9 @@ h6, .h6{font-size: 14px;}
 .learn-grey{
     padding: 15px 50px;
 }
-#products{
-    padding-bottom: 75px;padding-top: 35px;
-}
+/*#products{*/
+    /*padding-bottom: 75px;padding-top: 35px;*/
+/*}*/
 #news{
     padding: 35px 0;
 }

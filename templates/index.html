@@ -15,7 +15,8 @@
     <div class="video-container">
         <div class="title-container">
             <div class="headline">
-                <h3>State of the art</h3>
+{#                <h3>State of the art</h3>#}
+                <h1>Banking</h1>
                 <h1>Solutions</h1>
                 <a href="{% url 'home' %}#products" class="btn btn-default learn">LEARN MORE</a>
             </div>
@@ -30,15 +31,15 @@
 </div>
 </section>
 
-<section id="aboutus" class="secPad about">
+<section id="aboutus" class="about">
     <div class="container">
         <div class="heading">
             <h2>
                 About Us
             </h2>
-            <h6 id="small-intro">
-                Introduction
-            </h6>
+{#            <h6 id="small-intro">#}
+{#                Introduction#}
+{#            </h6>#}
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -100,15 +101,15 @@
         </div>
     </div>
 </section>
-<section class="secPad about" id="products">
+<section class=" about" id="products">
     <div class="container">
         <div class="heading">
             <h2>
                 Products
             </h2>
-            <h6 id="small-intro">
-                Our Solutions
-            </h6>
+{#            <h6 id="small-intro">#}
+{#                Our Solutions#}
+{#            </h6>#}
         </div>
         <div class="row">
             <div class="col-md-6">
@@ -281,7 +282,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-xs-12">
-                <h3 class="grey-p weight-600">Speak your mind</h3>
+{#                <h3 class="grey-p weight-600">Speak your mind</h3>#}
                 <form id="contact" role="form" method="POST" action="{% url 'contact' %}#contact">
                     {% csrf_token %}
                     <div class="errors"></div>
@@ -309,7 +310,7 @@
                 <h5 class="grey-p">City Plaza</h5>
                 <h5 class="grey-p">Wadi Saqra</h5>
                 <h5 class="grey-p">Amman, Jordan</h5>
-                <h5 class="grey-p">Tel +962 79 999 9999</h5>
+{#                <h5 class="grey-p">Tel +962 79 999 9999</h5>#}
             </div>
         </div>
     </div>
