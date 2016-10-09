@@ -1,29 +1,30 @@
 {% extends "base.html" %}
 {% block navbar %}
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#main-nav"><span class="sr-only">Toggle navigation</span> <span
-                    class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a href="{% url 'main.views.home' %}" class="navbar-brand scroll-top logo"><img src="/static/images/metabanks-logo.png"></a></div>
-        <div id="main-nav" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav" id="mainNav">
-                <li class="active"><a href="{% url 'home' %}#home" class="scroll-link">Home</a></li>
-                <li><a href="{% url 'home' %}#aboutus" class="scroll-link">About Us</a></li>
-                <li><a href="{% url 'home' %}#products" class="scroll-link">Products</a></li>
-{#                <li><a href="{% url 'home' %}#news" class="scroll-link">News</a></li>#}
-{#                <li><a href="{% url 'home' %}#support" class="scroll-link">Support</a></li>#}
-                <li><a href="{% url 'home' %}#contact" class="scroll-link">Contact Us</a></li>
-            </ul>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#main-nav"><span class="sr-only">Toggle navigation</span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <a href="{% url 'main.views.home' %}" class="navbar-brand scroll-top logo"><img
+                        src="/static/images/metabanks-logo.png"></a></div>
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" id="mainNav">
+                    <li class="active"><a href="{% url 'home' %}#home" class="scroll-link">Home</a></li>
+                    <li><a href="{% url 'home' %}#aboutus" class="scroll-link">About Us</a></li>
+                    <li><a href="{% url 'home' %}#products" class="scroll-link">Products</a></li>
+                    {#                <li><a href="{% url 'home' %}#news" class="scroll-link">News</a></li>#}
+                    {#                <li><a href="{% url 'home' %}#support" class="scroll-link">Support</a></li>#}
+                    <li><a href="{% url 'home' %}#contact" class="scroll-link">Contact Us</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <!--/.navbar-collapse-->
-</nav>
+        <!--/.navbar-collapse-->
+    </nav>
 {% endblock %}
 {% block content %}
     <section id="home">
-        <div class="banner-container" ><img class="img-responsive img-banner"
+        <div class="banner-container"><img class="img-responsive img-banner"
                                            src="/static/images/Core-Banking-Middleware-banner-new.png"
                                            alt="banner"/>
         </div>
@@ -42,47 +43,55 @@
                 <div class="col-md-12">
 
                     <p class="grey-p">
-                        <span class="green-text">MetaBanks</span> Middleware is at the heart of all other MetaBanks solutions, it introduces an architectural layer on top of the Core Banking system in order to abstract the underlying complexity of the Core Banking business logic. The MetaBanks Middleware introduces a Service Oriented Architecture mechanism that exposes SOAP based web services that can be consumed over HTTPS. The MetaBanks Middleware ships with Software Development Kits (SDK’s) in multiple programming languages including VB.NET, C#, Java, PHP and Python that are ready to be used by IT teams to rapidly develop in house banking solutions without worrying about Core Banking implementation and integration details. A comprehensive list of features include:
+                        <span class="green-text">MetaBanks</span> Middleware is at the heart of all other MetaBanks
+                        solutions, it introduces an architectural layer on top of the Core Banking system in order to
+                        abstract the underlying complexity of the Core Banking business logic. The MetaBanks Middleware
+                        introduces a Service Oriented Architecture mechanism that exposes REST based web services that
+                        can be consumed over HTTPS. The MetaBanks Middleware ships with Software Development Kits
+                        (SDK’s) in multiple programming languages including VB.NET, C#, Java, PHP and Python that are
+                        ready to be used by IT teams to rapidly develop in house banking solutions without worrying
+                        about Core Banking implementation and integration details. A comprehensive list of features
+                        include:
                     </p>
-{#                    <ul class="padding-30 grey-p">#}
-{#                        <li>Architected and deployed as Stateless J2EE Enterprise JavaBeans.</li>#}
-{#                        <li>Scalable horizontally and vertically in order to process and handle millions of concurrent requests per second.</li>#}
-{#                        <li>Exposes a SOAP based interface with a well defined WSDL interface for enabling JAX-WS service consumption with WS-Security Profiles.</li>#}
-{#                        <li>Transport level encryption with a 2048 bit cipher to protect the communication channel between the Software Development Kit (SDK) and the MetaBanks Middleware.</li>#}
-{#                        <li>Message-level security to ensure confidentiality by digitally encrypting message parts; integrity using digital signatures; and authentication by requiring username, X.509, or SAML tokens.</li>#}
-{#                        <li>Provides SDK’s for various programming languages including Java, Python, PHP, VB.NET and C# to allow developers to easily retrieve data from the core banking system with minimal effort.</li>#}
-{#                        <li>Exposes numerous endpoints for retrieving data from the core banking system including but not limited to customer information, account information, account transactions, credit card information, loan information, Letter of Credit details, Letter of Guarantee details, Placements, Deposits, Foreign Exchange transactions, Interest Rate Swaps etc.</li>#}
-{#                        <li>Out of the box integration with the MetaBanks Web/Mobile Banking solution.</li>#}
-{#                        <li>Out of the box integration with the MetaBanks Exposure Management System solution.</li>#}
-{#                    </ul>#}
+                    {#                    <ul class="padding-30 grey-p">#}
+                    {#                        <li>Architected and deployed as Stateless J2EE Enterprise JavaBeans.</li>#}
+                    {#                        <li>Scalable horizontally and vertically in order to process and handle millions of concurrent requests per second.</li>#}
+                    {#                        <li>Exposes a SOAP based interface with a well defined WSDL interface for enabling JAX-WS service consumption with WS-Security Profiles.</li>#}
+                    {#                        <li>Transport level encryption with a 2048 bit cipher to protect the communication channel between the Software Development Kit (SDK) and the MetaBanks Middleware.</li>#}
+                    {#                        <li>Message-level security to ensure confidentiality by digitally encrypting message parts; integrity using digital signatures; and authentication by requiring username, X.509, or SAML tokens.</li>#}
+                    {#                        <li>Provides SDK’s for various programming languages including Java, Python, PHP, VB.NET and C# to allow developers to easily retrieve data from the core banking system with minimal effort.</li>#}
+                    {#                        <li>Exposes numerous endpoints for retrieving data from the core banking system including but not limited to customer information, account information, account transactions, credit card information, loan information, Letter of Credit details, Letter of Guarantee details, Placements, Deposits, Foreign Exchange transactions, Interest Rate Swaps etc.</li>#}
+                    {#                        <li>Out of the box integration with the MetaBanks Web/Mobile Banking solution.</li>#}
+                    {#                        <li>Out of the box integration with the MetaBanks Exposure Management System solution.</li>#}
+                    {#                    </ul>#}
                     <br>
                 </div>
-{#                <div class="col-md-4 ">#}
-{#                    <h1 class=" margin-top-0 green-qoute">“</h1>#}
-{#                    <h1 class="investment"> The Individual Investor</h1>#}
-{#                    <p class="parg width-69">#}
-{#                        should act consistently as an investor and not as a speculator#}
-{#                    </p>#}
-{#                    <h1 class="second-qoute green-qoute">”</h1>#}
-{#                </div>#}
+                {#                <div class="col-md-4 ">#}
+                {#                    <h1 class=" margin-top-0 green-qoute">“</h1>#}
+                {#                    <h1 class="investment"> The Individual Investor</h1>#}
+                {#                    <p class="parg width-69">#}
+                {#                        should act consistently as an investor and not as a speculator#}
+                {#                    </p>#}
+                {#                    <h1 class="second-qoute green-qoute">”</h1>#}
+                {#                </div>#}
             </div>
 
         </div>
     </section>
-{#    <section class="secPad">#}
-{#        <div class="container">#}
-{#            <div class="heading">#}
-{#                <h3>#}
-{#                    Product Overview#}
-{#                </h3>#}
-{#            </div>#}
-{#            <div class="row">#}
-{#                <div class="col-md-8">#}
-{#                    <img class="img-responsive" src="/static/images/video.png">#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
+    {#    <section class="secPad">#}
+    {#        <div class="container">#}
+    {#            <div class="heading">#}
+    {#                <h3>#}
+    {#                    Product Overview#}
+    {#                </h3>#}
+    {#            </div>#}
+    {#            <div class="row">#}
+    {#                <div class="col-md-8">#}
+    {#                    <img class="img-responsive" src="/static/images/video.png">#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
     <section class="margin-bot-50">
         <div class="container">
             <div class="heading">
@@ -95,9 +104,9 @@
                     <div class="about padding-10">
                         <img class="img-responsive medium-margin-top" src="/static/images/feature-limits-reports.png">
 
-{#                        <h3 class="bold">Limits Report</h3>#}
+                        {#                        <h3 class="bold">Limits Report</h3>#}
                         </br>
-                        <p class="grey-p font-16 width-90">Architected and deployed as Stateless J2EE Enterprise JavaBeans.</p>
+                        <p class="grey-p font-16 width-90">Architected and deployed as Stateless REST endpoints.</p>
 
                     </div>
                 </div>
@@ -106,9 +115,11 @@
                         <img class="img-responsive medium-margin-top"
                              src="/static/images/feature-relationship-reports1.png">
 
-{#                        <h3 class="bold">Relationship Reports</h3>#}
-<br>
-                        <p class="grey-p font-16 width-90">Scalable horizontally and vertically in order to process and handle millions of concurrent requests per second.</p>
+                        {#                        <h3 class="bold">Relationship Reports</h3>#}
+                        <br>
+
+                        <p class="grey-p font-16 width-90">Scalable horizontally and vertically in order to process and
+                            handle millions of concurrent requests per second.</p>
                     </div>
                 </div>
                 <div class="col-md-4 features">
@@ -116,9 +127,11 @@
                         <img class="img-responsive medium-margin-top"
                              src="/static/images/feature-limits-vs-exposure.png">
 
-{#                        <h3 class="bold">Limits: vs.Exposure</h3>#}
-<br>
-                        <p class="grey-p font-16 width-90">Exposes a SOAP based interface with a well defined WSDL interface for enabling JAX-WS service consumption with WS-Security Profiles.</p>
+                        {#                        <h3 class="bold">Limits: vs.Exposure</h3>#}
+                        <br>
+
+                        <p class="grey-p font-16 width-90">Exposes a REST based interface with a well defined interface
+                            for enabling retrieval and filtering of data.</p>
                     </div>
                 </div>
             </div>
@@ -127,18 +140,24 @@
                     <div class="about padding-10">
                         <img class="img-responsive medium-margin-top" src="/static/images/feature-exposure-reports.png">
 
-{#                        <h3 class="bold">Exposure Report</h3>#}
-<br>
-                        <p class="grey-p font-16 width-90">Transport level encryption with a 2048 bit cipher to protect the communication channel between the Software Development Kit (SDK) and the MetaBanks Middleware.</p>
+                        {#                        <h3 class="bold">Exposure Report</h3>#}
+                        <br>
+
+                        <p class="grey-p font-16 width-90">Transport level encryption with a 2048 bit cipher to protect
+                            the communication channel between the Software Development Kit (SDK) and the MetaBanks
+                            Middleware.</p>
                     </div>
                 </div>
                 <div class="col-md-4 features">
                     <div class="about padding-10">
                         <img class="img-responsive medium-margin-top" src="/static/images/feature-workflow1.png">
 
-{#                        <h3 class="bold">Workflow</h3>#}
-<br>
-                        <p class="grey-p font-16 width-90">Message-level security to ensure confidentiality by digitally encrypting message parts; integrity using digital signatures; and authentication by requiring username, X.509, or SAML tokens.</p>
+                        {#                        <h3 class="bold">Workflow</h3>#}
+                        <br>
+
+                        <p class="grey-p font-16 width-90">Message-level security to ensure confidentiality by digitally
+                            encrypting message parts; integrity using digital signatures; and authentication by
+                            requiring username, X.509, or SAML tokens.</p>
                     </div>
                 </div>
                 <div class="col-md-4 features">
@@ -146,9 +165,12 @@
                         <img class="img-responsive medium-margin-top"
                              src="/static/images/Provides-SDK.png">
 
-{#                        <h3 class="bold">Profitability Report</h3>#}
-<br>
-                        <p class="grey-p font-16 width-90">Provides SDK’s for various programming languages including Java, Python, PHP, VB.NET and C# to allow developers to easily retrieve data from the core banking system with minimal effort.</p>
+                        {#                        <h3 class="bold">Profitability Report</h3>#}
+                        <br>
+
+                        <p class="grey-p font-16 width-90">Provides SDK’s for various programming languages including
+                            Java, Python, PHP, VB.NET and C# to allow developers to easily retrieve data from the core
+                            banking system with minimal effort.</p>
                     </div>
                 </div>
             </div>
@@ -158,9 +180,14 @@
                         <img class="img-responsive medium-margin-top"
                              src="/static/images/feature-profitability-reports.png">
 
-{#                        <h3 class="bold">Portfolio Report</h3>#}
-<br>
-                        <p class="grey-p font-16 width-90">Exposes numerous endpoints for retrieving data from the core banking system including but not limited to customer information, account information, account transactions, credit card information, loan information, Letter of Credit details, Letter of Guarantee details, Placements, Deposits, Foreign Exchange transactions, Interest Rate Swaps etc..</p>
+                        {#                        <h3 class="bold">Portfolio Report</h3>#}
+                        <br>
+
+                        <p class="grey-p font-16 width-90">Exposes numerous endpoints for retrieving data from the core
+                            banking system including but not limited to customer information, account information,
+                            account transactions, credit card information, loan information, Letter of Credit details,
+                            Letter of Guarantee details, Placements, Deposits, Foreign Exchange transactions, Interest
+                            Rate Swaps etc..</p>
                     </div>
                 </div>
                 <div class="col-md-4 features">
@@ -168,9 +195,11 @@
                         <img class="img-responsive medium-margin-top"
                              src="/static/images/Out-of-the-box-integration.png">
 
-{#                        <h3 class="bold">Portfolio Report</h3>#}
-<br>
-                        <p class="grey-p font-16 width-90">Out of the box integration with the MetaBanks Web/Mobile Banking solution.</p>
+                        {#                        <h3 class="bold">Portfolio Report</h3>#}
+                        <br>
+
+                        <p class="grey-p font-16 width-90">Out of the box integration with the MetaBanks Web/Mobile
+                            Banking solution.</p>
                     </div>
                 </div>
                 <div class="col-md-4 features">
@@ -178,9 +207,11 @@
                         <img class="img-responsive medium-margin-top"
                              src="/static/images/Out-of-the-box-integration-with-the-MetaBanks-Exposure-Management-System-solution.png">
 
-{#                        <h3 class="bold">Portfolio Report</h3>#}
-<br>
-                        <p class="grey-p font-16 width-90">Out of the box integration with the MetaBanks Exposure Management System solution.</p>
+                        {#                        <h3 class="bold">Portfolio Report</h3>#}
+                        <br>
+
+                        <p class="grey-p font-16 width-90">Out of the box integration with the MetaBanks Exposure
+                            Management System solution.</p>
                     </div>
                 </div>
             </div>
