@@ -48,7 +48,8 @@ def contact(request):
                       "hayitsnotforanyone@gmail.com",
                       ['m.zuby@metabanks.com'], fail_silently=False,
                       html_message="Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Company: " + company + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + last_name)
-            return render(request, 'index.html')
+            form = ContactUs()
+            return render(request, 'index.html', {"form": form})
         else:
             return render(request, 'index.html', {"form": form})
     else:
