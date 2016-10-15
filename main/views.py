@@ -49,9 +49,11 @@ def contact(request):
                       ['m.zuby@metabanks.com'], fail_silently=False,
                       html_message="Message: " + message + "<br>" + "Phone: " + phone + "<br>" + "Company: " + company + "<br>" + "Email: " + email + "<br>" + "Name: " + first_name + last_name)
             form = ContactUs()
-            return render(request, 'index.html', {"form": form})
+            success = True
+            return render(request, 'index.html', {"form": form, "success": success})
         else:
-            return render(request, 'index.html', {"form": form})
+            success = False
+            return render(request, 'index.html', {"form": form, "success": success})
     else:
         form = ContactUs()
         return render(request, 'index.html', {"form": form})

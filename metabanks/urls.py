@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^core', core, name='core'),
     url(r'^wm', wm, name='wm'),
     url(r'^approval', approval, name='approval'),
+    url(r'^captcha/', include('captcha.urls')),
     # url(r'^products$', products, name='products'),
     # (r'^media/(?P<path>.*)$', 'django.views.static.serve', {
     #                        'document_root': settings.MEDIA_ROOT}),

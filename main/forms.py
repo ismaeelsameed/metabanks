@@ -1,5 +1,6 @@
 from django import forms
 from django.forms import TextInput, Textarea
+from captcha.fields import CaptchaField
 
 
 class ContactUs(forms.Form):
@@ -9,6 +10,7 @@ class ContactUs(forms.Form):
     phone_number = forms.CharField(max_length=30, label="", required=False)
     company = forms.CharField(max_length=30, label="", required=False)
     comment = forms.CharField(widget=forms.Textarea, label="")
+    captcha = CaptchaField(id_prefix="captcha", label="")
 
     def __init__(self, *args, **kwargs):
         super(ContactUs, self).__init__(*args, **kwargs)
@@ -32,3 +34,6 @@ class ContactUs(forms.Form):
         self.fields['comment'].widget = Textarea(attrs={
             'class': 'text-input-grey',
             'placeholder': 'Type your inquiry here ...'})
+        # self.fields['captcha'].widget = TextInput(attrs={
+        #     'class': 'text-input-grey',
+        #     'placeholder': 'Captcha'})

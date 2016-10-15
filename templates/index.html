@@ -310,6 +310,11 @@
             <div class="row">
                 <div class="col-md-6 col-xs-12">
                     {#                <h3 class="grey-p weight-600">Speak your mind</h3>#}
+                    {% if success %}
+                    <div class="alert alert-success">
+                        <strong>your request has been successfully submitted, we will get back to you as quickly as possible.</strong>
+                    </div>
+                    {% endif %}
                     <form id="contact" role="form" method="POST" action="{% url 'contact' %}#contact">
                         {% csrf_token %}
                         <div class="errors"></div>
