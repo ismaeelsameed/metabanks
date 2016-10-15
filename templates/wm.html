@@ -9,9 +9,9 @@
                 <a href="{% url 'main.views.home' %}" class="navbar-brand scroll-top logo"><img src="/static/images/final-logo.png" WIDTH="190" HEIGHT="28"></a></div>
             <div id="main-nav" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav" id="mainNav">
-                    <li class="active"><a href="{% url 'home' %}#home" class="scroll-link">Home</a></li>
-                    <li><a href="{% url 'home' %}#aboutus" class="scroll-link">About Us</a></li>
-                    <li><a href="{% url 'home' %}#products" class="scroll-link">Products</a></li>
+                    <li class="active" id="home-link"><a href="#home" class="scroll-link">Home</a></li>
+                    <li><a href="#aboutus" class="scroll-link">About Us</a></li>
+                    <li id="products-link"><a href="#products" class="scroll-link">Products</a></li>
                     {#                <li><a href="{% url 'home' %}#news" class="scroll-link">News</a></li>#}
                     {#                <li><a href="{% url 'home' %}#support" class="scroll-link">Support</a></li>#}
                     <li><a href="{% url 'home' %}#contact" class="scroll-link">Contact Us</a></li>
@@ -225,4 +225,12 @@
             </div>
         </div>
     </section>
+{% endblock %}
+{% block js %}
+    <script>
+        $(document).ready(function () {
+            $("#home-link").removeClass("active");
+            $("#products-link").addClass("active");
+        });
+    </script>
 {% endblock %}
